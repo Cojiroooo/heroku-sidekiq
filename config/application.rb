@@ -23,5 +23,16 @@ module Workspace
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.active_job.queue_adapter = :sidekiq
+    
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      address: ENV['smtp_address'] || "smtp.gmail.com",
+      domain: 'example.com',
+      port: ENV['smtp_port'] || 587,
+      user_name: ENV['smtp_user_name'] || "eveve0418@gmail.com",
+      password: ENV['smtp_password'] || "sqvqkberakkjdvom",
+      authentication: 'plain',
+      enable_starttls_auto: true
+    }
   end
 end
