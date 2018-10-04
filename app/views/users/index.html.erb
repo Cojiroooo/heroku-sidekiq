@@ -1,0 +1,19 @@
+<h1>User一覧</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th><th>Email</th><th>Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |u| %>
+      <tr>
+        <td><%= u.name %></td>
+        <td><%= u.email %></td>
+        <td style="padding: 5px;">
+          <%= link_to "Send a mail", test_send_mail_user_path(u), style: "padding:5px 10px; font-size: 11px; color: white; background-color: #ff69b4; text-decoration: none;" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
