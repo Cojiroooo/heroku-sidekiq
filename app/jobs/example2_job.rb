@@ -7,5 +7,9 @@ class Example2Job < ApplicationJob
     File.open('/tmp/test1111.txt', 'w') do |text|
       text.puts("Hello!")
     end
+    
+    File.open('tmp/test','w') do |file|
+      text.puts("hello!")
+    end
   end
 end
