@@ -28,4 +28,10 @@ class UsersController < ApplicationController
     #   end
     # end
   end
+  
+  # Herokuにファイルを一時保存できるかどうかの確認
+  def execute_example2_job
+    Example2Job.perform_later
+    redirect_to users_path
+  end
 end

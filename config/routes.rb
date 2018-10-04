@@ -5,6 +5,10 @@ Rails.application.routes.draw do
       get :test_send_mail
     end
   end
+
+  get '/execute_example2_job', to: 'users#execute_example2_job'
+  
+  root to: 'users#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
