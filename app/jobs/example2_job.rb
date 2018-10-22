@@ -8,8 +8,8 @@ class Example2Job < ApplicationJob
       text.puts("Hello!")
     end
     
-    File.open('tmp/test','w') do |file|
-      text.puts("hello!")
-    end
+    # File.open('tmp/test','w') do |file|
+    #   text.puts("hello!")
+    # end
   end
 end
